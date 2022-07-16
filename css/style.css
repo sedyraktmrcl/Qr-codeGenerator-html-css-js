@@ -1,0 +1,72 @@
+body{
+display:flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+background:#030c59;
+}
+*{
+font-family:'poppins',sans-serif;
+margin:0;
+padding:0;
+}
+.container{
+background:#fff;
+max-width: 400px;
+border-radius:10px;
+padding:18px 25px;
+transition:height 0.2s ease;
+height:260px;
+}
+.container.active{
+height:530px;
+}
+header h1{
+font-size:22px;
+font-weight:800;
+font-family:'verdana',sans-serif;
+}
+header p{
+font-size:15px;
+margin-top:10px;
+}
+.container .form{
+margin:20px 0px 30px;
+}
+.form  :where(input, button){
+    width:100%;
+    height:55px;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+}
+.form input{
+font-size:16px;
+border:1px solid #999;
+}
+.form input::placeholder{
+padding:0px 10px;
+}
+.form button{
+background:#030c59;
+color:#fff;
+cursor: pointer;
+margin-top:10px;
+}
+.container .qr_code{
+border:1px solid  #ccc;
+padding:33px 0px;
+display: flex;
+pointer-events: none;
+opacity: 0;
+align-items: center;
+justify-content: center;
+}
+.container.active .qr_code{
+    pointer-events: auto;
+    opacity: 1;
+    transition: opacity 0.5s 0.05s ease;
+}
+#icon{
+color:#030c59;
+}
